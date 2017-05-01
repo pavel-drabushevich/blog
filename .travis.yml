@@ -1,0 +1,10 @@
+sudo: false
+deploy:
+  provider: script
+  script: ./deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
+env:
+  global:
+  - GH_REF: github.com/pavel-drobushevich/blog.git
