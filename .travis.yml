@@ -1,10 +1,21 @@
+language: go
+go:
+  - 1.7
 sudo: false
-deploy:
-  provider: script
-  script: ./deploy.sh
-  skip_cleanup: true
-  on:
-    branch: master
+git:
+  depth: 10
+branches:
+  only:
+    - master
 env:
   global:
-  - GH_REF: github.com/pavel-drobushevich/blog.git
+    - SOURCE_DIR="public"
+    - BUILD_BRANCH="master"
+    - DEPLOY_BRANCH="gh-pages"
+    - GH_REF="github.com/pavel-drobushevich/blog.git"
+install:
+  - go get -u -v github.com/spf13/hugo
+script:
+  - hugo
+after_success:
+  - ./.travis/publish.sh
