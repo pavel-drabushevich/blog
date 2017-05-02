@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Pavel Drabushevich Tech Blog"
 theme = "hucore"
 copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/pdrobushevich\" target=\"_blank\">Twitter</a> | <a href=\"https://github.com/mgjohansen/hucore.git\" target=\"_blank\">Hucore theme</a> & <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
-googleAnalytics = "trackingcode"
+googleAnalytics = "UA-98386978-1"
 
 [taxonomies]
 tag = "tags"
@@ -32,5 +32,5 @@ url = "https://www.linkedin.com/in/paveldrobushevich/"
 fa_icon = "fa-linkedin-square"
 
 [[params.social]]
-url = "/index.xml"
+url = "https://pavel-drobushevich.github.io/blog/index.xml"
 fa_icon = "fa-rss"
