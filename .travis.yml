@@ -1,6 +1,6 @@
 language: go
 go:
-  - 1.7
+  - 1.9.4
 sudo: false
 git:
   depth: 10
@@ -14,8 +14,13 @@ env:
     - DEPLOY_BRANCH="gh-pages"
     - GH_REF="github.com/pavel-drobushevich/blog.git"
 install:
-  - go get -u -v github.com/spf13/hugo
+  - go get -u -v github.com/gohugoio/hugo
 script:
   - hugo
-after_success:
-  - ./.travis/publish.sh
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
