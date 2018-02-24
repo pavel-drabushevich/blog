@@ -14,7 +14,7 @@ env:
     - DEPLOY_BRANCH="gh-pages"
     - GH_REF="github.com/pavel-drobushevich/blog.git"
 install:
-  - go get -u -v github.com/spf13/hugo
+  - go get -u -v github.com/gohugoio/hugo
 script:
   - hugo
 deploy:
