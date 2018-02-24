@@ -10,7 +10,8 @@ branches:
 install:
   - go get -u -v github.com/gohugoio/hugo
 script:
-  - hugo
+  - hugo --verbose
+  - ls -la themes/hucore
 deploy:
   provider: pages
   local-dir: public
